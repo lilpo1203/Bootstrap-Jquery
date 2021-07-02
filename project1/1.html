@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        
+        .row.content {
+            height: 1500px
+        }
+        /* Set gray background color and 100% height */
+        
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+        
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Bootstrap & Jquery</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Frontend <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">Javascript</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Backend <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">NodeJS</a></li>
+                        <li><a href="#">.NET</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Database <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">MySQL</a></li>
+                        <li><a href="#">SQL Server</a></li>
+                        <li><a href="#">MongoDB</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Frontend</a>
+                    <a href="#" class="list-group-item">HTML</a>
+                    <a href="#" class="list-group-item">CSS</a>
+                    <a href="#" class="list-group-item">Javascript</a>
+                    <a href="#" class="list-group-item">ReactJS</a>
+                    <a href="#" class="list-group-item">Bootstrap</a>
+                    <a href="#" class="list-group-item">Jquery</a>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Backend</a>
+                    <a href="#" class="list-group-item">PHP</a>
+                </div>
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">Database</a>
+                    <a href="#" class="list-group-item">MySQL</a>
+
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="data:image/png;base64,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 "
+                            class="img-thumbnail " alt="Cinque Terre ">
+                        <p>HTML</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="data:image/png;base64,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 "
+                            class="img-thumbnail " alt="Cinque Terre ">
+                        <p>HTML</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="data:image/png;base64,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 "
+                            class="img-thumbnail " alt="Cinque Terre ">
+                        <p>HTML</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="data:image/png;base64,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 "
+                            class="img-thumbnail " alt="Cinque Terre ">
+                        <p>HTML</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="data:image/png;base64,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 "
+                            class="img-thumbnail " alt="Cinque Terre ">
+                        <p>HTML</p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <ul class="pagination">
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid ">
+            <p>Copyright by Hồng Quân Lão Tổ</p>
+        </footer>
+
+</body>
+
+</html>
